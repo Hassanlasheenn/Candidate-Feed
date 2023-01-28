@@ -6,12 +6,17 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import "./SignUpContainerLayout.scss";
+import "./SignContainerLayout.scss";
 
-import LogoContra from "../assets/LogoContra";
-import CloseIcon from "../assets/CloseIcon";
+import LogoContra from "../../../../assets/LogoContra";
+import CloseIcon from "../../../../assets/CloseIcon";
 
-const SignUpContainerLayout = ({ title, subtitle, children }) => {
+const SignContainerLayout = ({
+  title,
+  subtitle,
+  onPreviousClick,
+  children,
+}) => {
   const renderBackground = () => (
     <Box className="authContainer__bg-image">
       <Box
@@ -52,21 +57,24 @@ const SignUpContainerLayout = ({ title, subtitle, children }) => {
         <Container maxWidth="xl">
           {renderContentHeader()}
           <Box className="authContent_container">
-            <Link
-              component="button"
-              underline="hover"
-              tabIndex={0}
-              color="rgb(155, 162, 176)"
-              sx={{
-                "&:hover": {
-                  color: "#000",
-                },
-                fontWeight: "600",
-                transition: "color .2s ease-in-out",
-              }}
-            >
-              Previous Step
-            </Link>
+            {onPreviousClick && (
+              <Link
+                component="button"
+                underline="hover"
+                tabIndex={0}
+                color="rgb(155, 162, 176)"
+                onClick={onPreviousClick}
+                sx={{
+                  "&:hover": {
+                    color: "#000",
+                  },
+                  fontWeight: "600",
+                  transition: "color .2s ease-in-out",
+                }}
+              >
+                Previous Step
+              </Link>
+            )}
             <Grid container direction="column">
               <Grid item container xs={12} justifyContent="center">
                 <Typography variant="h4">{title}</Typography>
@@ -88,6 +96,7 @@ const SignUpContainerLayout = ({ title, subtitle, children }) => {
           </Box>
           <Grid
             container
+            item
             xs={12}
             justifyContent="center"
             sx={{
@@ -113,4 +122,4 @@ const SignUpContainerLayout = ({ title, subtitle, children }) => {
   );
 };
 
-export default SignUpContainerLayout;
+export default SignContainerLayout;

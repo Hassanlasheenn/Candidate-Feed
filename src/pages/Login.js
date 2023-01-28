@@ -3,7 +3,6 @@ import blur from "../assets/blur_bg_1.jpeg";
 import "../styles/Login.css";
 import { useNavigate } from "react-router-dom";
 import LogoContra from "../assets/LogoContra";
-
 const Login = ({ title }) => {
   useEffect(() => {
     return (document.title = title)[title];

@@ -1,13 +1,16 @@
 import { Grid, Link } from "@mui/material";
-import SignUpContainerLayout from "../../layouts/SignUpContainerLayout";
+import SignContainerLayout from "../common/layouts/SignContainerLayout/SignContainerLayout";
 import SignUpCard from "../../components/SignUpCard/SignUpCard";
 import PrimaryButton from "../../components/PrimaryButton";
+import { useNavigate } from "react-router-dom";
 import "./Hiring.scss";
 const Hiring = () => {
+  const navigate = useNavigate();
   return (
-    <SignUpContainerLayout
+    <SignContainerLayout
       title="What are your main goals?"
       subtitle="Select as many as you’d like. You'll still have access to all of Contra's features."
+      onPreviousClick={() => navigate("/sign-up")}
     >
       <Grid container justifyContent="space-between">
         <SignUpCard
@@ -47,7 +50,7 @@ const Hiring = () => {
           Already have an account? Sign in here.
         </Link>
       </Grid>
-    </SignUpContainerLayout>
+    </SignContainerLayout>
   );
 };
 
