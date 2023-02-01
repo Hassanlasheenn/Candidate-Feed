@@ -1,0 +1,141 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"';
+  font-size: 62.5%;
+  /* 62.5% = 10px */ }
+
+body {
+  box-sizing: border-box; }
+
+.login {
+  height: 100vh;
+  flex: none;
+  box-sizing: border-box;
+  position: relative;
+  /* logo position */ }
+  .login__banner {
+    position: absolute;
+    top: 3em;
+    left: 5em; }
+  .login__page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+  .login__container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15em;
+    right: 24em;
+    background: #fff;
+    border-radius: 1.2rem;
+    width: 70%;
+    height: 70vh;
+    padding-left: 6em; }
+    .login__container-left {
+      flex: 0 0 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+      margin-top: 33%; }
+      .login__container-left--title {
+        font-size: 3.125rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        line-height: 40px;
+        margin-bottom: 1em; }
+      .login__container-left--input-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        width: 90%; }
+      .login__container-left--btn {
+        padding: .8rem 1.3rem;
+        background-color: #000;
+        border: none;
+        color: #fff;
+        border-radius: 2.5rem;
+        font-weight: 600;
+        font-size: 1.3rem;
+        line-height: 1.42;
+        cursor: pointer; }
+    .login__container-right {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+input[type="text"] {
+  padding-top: 3.2rem;
+  padding-left: 1.3rem;
+  padding-bottom: .8rem;
+  width: 100%;
+  border-radius: .6rem;
+  border: 1px solid #d0d4dc;
+  transition: all .3s ease-in-out;
+  margin-bottom: 1.5em; }
+  input[type="text"]:hover {
+    border: 1px solid #3b3c3e; }
+  input[type="text"]:focus {
+    padding-top: 4.5rem;
+    padding-bottom: .8rem;
+    outline: none;
+    transition: all .4s ease-in-out; }
+  input[type="text"]::placeholder {
+    position: absolute; }
+
+/* sign up container */
+.signup__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 8em;
+  gap: 1rem; }
+  .signup__container-text {
+    color: #000;
+    max-width: 480px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.7rem;
+    letter-spacing: 0.15px;
+    line-height: 1.42; }
+  .signup__container-btn {
+    padding: .8rem 1.5rem;
+    background-color: black;
+    border: none;
+    color: #fff;
+    border-radius: 2.5rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.42;
+    cursor: pointer;
+    transition: all .3s ease-in-out; }
+    .signup__container-btn:hover {
+      color: #000;
+      background-color: #fff;
+      transition: all .3s ease-in-out; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }

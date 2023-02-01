@@ -1,0 +1,176 @@
+.login {
+    height: 100vh;
+    flex: none;
+    box-sizing: border-box;
+    position: relative;
+
+    // blur background
+    // &__bg {
+    //     img {
+    //         width: 100%;
+    //         height: 100vh;
+    //         filter: blur(20px);
+    //     }
+    // }
+    /* logo position */
+    &__banner {
+        position: absolute;
+        top: 3em;
+        left: 5em;
+    }
+
+    &__page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    &__container {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 15em;
+        right: 24em;
+        background: $color-white;
+        border-radius: 1.2rem;
+        width: 70%;
+        height: 70vh;
+        padding-left: 6em;
+
+        &-left {
+            flex: 0 0 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: left;
+            margin-top: 33%;
+
+            &--title {
+                font-size: 3.125rem;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                line-height: 40px;
+                margin-bottom: 1em;
+            }
+
+            &--input-cont {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                position: relative;
+                width: 90%;
+
+                // label {
+                //     position: absolute;
+                //     top: .5rem;
+                //     left: 1.45rem;
+                //     font-size: 1rem;
+                //     font-weight: 400;
+                //     line-height: 1.333;
+                //     color: rgb(103,112, 132);
+                // }
+            }
+            // login button
+            &--btn {
+                padding: .8rem 1.3rem;
+                background-color: $color-black;
+                border: none;
+                color: $color-white;
+                border-radius: 2.5rem;
+                font-weight: 600;
+                font-size: 1.3rem;
+                line-height: 1.42;
+                cursor: pointer;
+            }
+        }
+        // right side of the card
+        &-right {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            // img {
+            //     width: 90%;
+            // }
+        }
+
+
+    }
+}
+
+
+input[type="text"] {
+    padding-top: 3.2rem;
+    padding-left: 1.3rem;
+    padding-bottom: .8rem;
+    width: 100%;
+    border-radius: .6rem;
+    border: $input-border;
+    transition: all .3s ease-in-out;
+    margin-bottom: 1.5em;
+
+    &:hover {
+        border: $input-border-focus;
+    }
+
+    &:focus {
+        padding-top: 4.5rem;
+        padding-bottom: .8rem;
+        outline: none;
+        transition: all .4s ease-in-out;
+    }
+
+    &::placeholder {
+        position: absolute;
+    }
+}
+
+
+/* sign up container */
+
+.signup__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 8em;
+    gap: 1rem;
+
+    &-text {
+        color: $color-black;
+        max-width: 480px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.7rem;
+        letter-spacing: 0.15px;
+        line-height: 1.42;
+    }
+
+    &-btn {
+        padding: .8rem 1.5rem;
+        background-color: black;
+        border: none;
+        color: $color-white;
+        border-radius: 2.5rem;
+        font-weight: 600;
+        font-size: 1.3rem;
+        line-height: 1.42;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $color-black;
+            background-color: $color-white;
+            transition: all .3s ease-in-out;
+        }
+    }
+    
+}
