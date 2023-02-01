@@ -4,9 +4,10 @@ import React, { useEffect } from "react";
 // images
 import blur from "../../assets/blur_bg_3.jpg";
 import LogoContra from "../../assets/LogoContra";
+import LoginImg from "../../assets/contra-login-img.webp";
 // reusable components
-import Buttons from "../../components/Buttons";
-import CardContainer from "../../components/CardContainer";
+import Buttons from "../../common/components/Buttons";
+import CardContainer from "../../common/components/CardContainer";
 // styles
 import {
   emailAddressText,
@@ -53,7 +54,7 @@ const Login = ({ title }) => {
             <Box
               component="img"
               sx={loginImage}
-              src="https://contra.com/static/assets/login@2x.b44e5924.webp"
+              src={LoginImg}
               alt="Contra star house"
             />
           </Box>
