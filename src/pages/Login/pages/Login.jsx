@@ -2,11 +2,11 @@
 import { Typography, Box } from "@mui/material";
 import React, { useEffect } from "react";
 // images
-import blur from "../../assets/blur_bg_3.jpg";
-import LogoContra from "../../assets/LogoContra";
+import blur from "../../../assets/blur_bg_3.jpg";
+import LogoContra from "../../../assets/LogoContra";
 // reusable components
-import Buttons from "../../components/Buttons";
-import CardContainer from "../../components/CardContainer";
+import Buttons from "../../../common/components/Buttons";
+import CardContainer from "../../../common/components/CardContainer";
 // styles
 import {
   emailAddressText,
@@ -14,7 +14,7 @@ import {
   welcomeStyleText,
   newToContraText,
   loginImage,
-} from "./LoginStyles";
+} from "../LoginStyles";
 
 const Login = ({ title }) => {
   // the useeffect is for the display of the title when changing routes from one page to another
